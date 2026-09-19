@@ -1,0 +1,10 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id,data_provenance,synthetic
+2026-09-20T00:00:00.0000000Z,SYNTH_KB02_V2_3545_REV,V2,Reliable Handover,1,1,1,1,0,0.0,trial_started,,,Vps,B9-EXIT,,,,,,,,,,,auto=True,KB02,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:00.0000000Z,SYNTH_KB02_V2_3545_REV,V2,Reliable Handover,1,1,1,1,0,0.0,app_resumed,,,Vps,B9-EXIT,,,,,,,,,,,,KB02,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:00.0000000Z,SYNTH_KB02_V2_3545_REV,V2,Reliable Handover,1,1,1,1,0,0.0,indoor_state,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,synthetic reverse support: trial begins already indoors,KB02,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:15.0000000Z,SYNTH_KB02_V2_3545_REV,V2,Reliable Handover,1,1,1,1,0,15.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB02,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:30.0000000Z,SYNTH_KB02_V2_3545_REV,V2,Reliable Handover,1,1,1,1,0,30.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB02,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:43.6020000Z,SYNTH_KB02_V2_3545_REV,V2,Reliable Handover,1,1,1,1,0,43.602,reliability_state,IndoorVps,OutdoorGps,Vps,B9-EXIT,,,,,,,,,,,Exiting indoor volume; reliability threshold crossed toward outdoor,KB02,SYNTHETIC_REVERSE_SUPPORT,1
+,SYNTH_KB02_V2_3545_REV,V2,Reliable Handover,1,1,1,1,0,43.602,source_switched,Vps,Pdr,Pdr,B9-EXIT,,,,,,,,,,,Vps->Pdr,KB02,SYNTHETIC_REVERSE_SUPPORT,1
+,SYNTH_KB02_V2_3545_REV,V2,Reliable Handover,1,1,1,1,0,60.952,quality_threshold_passed,,,Pdr,B9-EXIT,,,,,,,,,,,GPS quality threshold passed during reacquisition,KB02,SYNTHETIC_REVERSE_SUPPORT,1
+,SYNTH_KB02_V2_3545_REV,V2,Reliable Handover,1,1,1,1,0,64.896,source_switched,Pdr,Gps,Gps,B9-EXIT,,,,,,,,,,,Pdr->Gps; GPS dwell/reliability gate satisfied,KB02,SYNTHETIC_REVERSE_SUPPORT,1

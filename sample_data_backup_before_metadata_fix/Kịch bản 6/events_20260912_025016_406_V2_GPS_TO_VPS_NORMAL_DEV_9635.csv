@@ -1,4 +1,0 @@
-﻿utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note
-2026-09-12T02:50:16.4084630Z,20260912_025016_406_V2_GPS_TO_VPS_NORMAL_DEV_9635,V2,Reliable Handover,1,1,1,1,0,0,trial_started,,,Gps,B9-104,0.0000000,0.0000000,,0,0,0,36.279,-2.832,174.86,0,auto=True
-2026-09-12T02:50:16.4132600Z,20260912_025016_406_V2_GPS_TO_VPS_NORMAL_DEV_9635,V2,Reliable Handover,1,1,1,1,0,0,app_resumed,,,Gps,B9-104,0.0000000,0.0000000,,0,0,0,36.279,-2.832,174.86,0,
-2026-09-12T02:50:16.4429350Z,20260912_025016_406_V2_GPS_TO_VPS_NORMAL_DEV_9635,V2,Reliable Handover,1,1,1,1,0,0,outdoor_state,,WaitingForGps,Gps,B9-104,0.0000000,0.0000000,,0,0,0,36.279,-2.832,174.86,0,

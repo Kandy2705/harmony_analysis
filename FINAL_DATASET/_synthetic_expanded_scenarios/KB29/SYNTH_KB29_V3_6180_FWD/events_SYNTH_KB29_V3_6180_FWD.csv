@@ -1,0 +1,36 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id,data_provenance,synthetic
+2026-09-20T00:00:00.0000000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:15.0000000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,15.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:30.0000000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,30.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:45.0000000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,45.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:00.0000000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,60.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:15.0000000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,75.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:30.0000000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,90.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:45.0000000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,105.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:52.5540000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,112.554,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:54.5820000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,114.582,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:54.5820000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,114.582,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:54.8820000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,114.882,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,1.0,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:58.7240000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,118.724,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted (1st handover),KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:58.7240000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,118.724,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,,VPS localization accepted (1st handover),KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:58.7240000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,118.724,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:04.8080000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,124.808,reliability_state,IndoorVps,OutdoorGps,Vps,B9-104,,,,,,,,,,,Exiting indoor volume; reliability threshold crossed toward outdoor,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:04.8080000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,124.808,source_switched,Vps,Pdr,Pdr,B9-104,,,,,,,,,,,Vps->Pdr,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:10.8920000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,130.892,source_switched,Pdr,Gps,Gps,B9-104,,,,,,,,,,,Pdr->Gps; GPS dwell/reliability gate satisfied,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:25.8920000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,145.892,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:40.8920000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,160.892,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:55.8920000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,175.892,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:10.8920000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,190.892,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:25.8920000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,205.892,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:40.8920000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,220.892,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:55.8920000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,235.892,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:04.4600000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,244.46,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:06.4880000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,246.488,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:06.4880000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,246.488,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,2.0,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:06.7880000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,246.788,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,2.0,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:10.6300000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,250.63,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,2.0,VPS localization accepted (2nd handover),KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:10.6300000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,250.63,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,,VPS localization accepted (2nd handover),KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:10.6300000Z,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,250.63,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB29,SYNTHETIC_SUPPORT,1
+,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,255.7,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=5,KB29,SYNTHETIC_SUPPORT,1
+,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,257.728,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB29,SYNTHETIC_SUPPORT,1
+,SYNTH_KB29_V3_6180_FWD,V3,No Dwell Time,1,0,1,1,0,257.728,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB29,SYNTHETIC_SUPPORT,1

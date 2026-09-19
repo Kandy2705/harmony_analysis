@@ -1,0 +1,42 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id,data_provenance,synthetic
+2026-09-20T00:00:00.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:15.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,15.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:30.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,30.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:45.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,45.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:00.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,60.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:15.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,75.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:30.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,90.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:45.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,105.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:00.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,120.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:15.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,135.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:30.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,150.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:45.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,165.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:00.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,180.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:15.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,195.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:30.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,210.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:45.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,225.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:00.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,240.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:00.7920000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,240.792,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:02.8240000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,242.824,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=3,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:05.8720000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,245.872,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=6,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:08.9200000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,248.92,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=9,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:11.9680000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,251.968,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=12,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:14.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,254.0,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:14.0000000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,254.0,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:15.0160000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,255.016,quality_threshold_failed,,,Pdr,B9-104,,,,,,,,,,1.0,vps_confidence=0.28 < minimumVpsConfidence=0.50,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:16.0320000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,256.032,quality_threshold_failed,,,Pdr,B9-104,,,,,,,,,,1.0,vps_confidence=0.21 < minimumVpsConfidence=0.50,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:17.0480000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,257.048,quality_threshold_passed,,,Pdr,B9-104,,,,,,,,,,1.0,vps_confidence=0.58 >= minimumVpsConfidence=0.50,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:18.0640000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,258.064,quality_threshold_failed,,,Pdr,B9-104,,,,,,,,,,1.0,vps_confidence=0.25 < minimumVpsConfidence=0.50,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:19.0800000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,259.08,quality_threshold_failed,,,Pdr,B9-104,,,,,,,,,,1.0,vps_confidence=0.23 < minimumVpsConfidence=0.50,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:19.0800000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,259.08,dwell_reset,,,Pdr,B9-104,,,,,,,,,,1.0,VPS dwell reset: confidence not sustained above minimumVpsConfidence,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:20.0960000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,260.096,dwell_started,,,Pdr,B9-104,,,,,,,,,,1.0,VPS dwell started,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:22.1280000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,262.128,dwell_passed,,,Vps,B9-104,,,,,,,,,,1.0,VPS dwell passed: 1.00s >= 1.00s,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:22.1280000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,262.128,vps_state,,Scanning,Vps,B9-104,,,,,,,,,,1.0,,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:23.1440000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,263.144,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted after dwell-stable confidence,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:23.1440000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,263.144,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,,VPS localization accepted after dwell-stable confidence,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:23.1440000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,263.144,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:28.2240000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,268.224,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=5,KB07,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:33.3040000Z,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,273.304,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=10,KB07,SYNTHETIC_SUPPORT,1
+,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,278.384,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=15,KB07,SYNTHETIC_SUPPORT,1
+,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,279.4,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB07,SYNTHETIC_SUPPORT,1
+,SYNTH_KB07_V1_3545_FWD,V1,Fixed Geometric,0,0,0,0,0,279.4,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB07,SYNTHETIC_SUPPORT,1

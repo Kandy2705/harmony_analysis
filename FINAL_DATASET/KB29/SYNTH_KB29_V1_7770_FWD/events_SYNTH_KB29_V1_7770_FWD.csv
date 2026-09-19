@@ -1,0 +1,64 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id,data_provenance,synthetic
+2026-09-20T00:00:00.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:15.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,15.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:30.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,30.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:45.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,45.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:00.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,60.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:15.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,75.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:30.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,90.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:45.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,105.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:00.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,120.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:15.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,135.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:30.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,150.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:45.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,165.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:00.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,180.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:15.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,195.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:30.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,210.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:03:45.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,225.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:00.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,240.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:00.7920000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,240.792,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:02.8240000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,242.824,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=3,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:05.8720000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,245.872,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=6,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:08.9200000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,248.92,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=9,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:11.9680000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,251.968,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=12,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:14.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,254.0,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:14.0000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,254.0,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:14.3000000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,254.3,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,1.0,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:18.1480000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,258.148,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted (1st handover),KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:18.1480000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,258.148,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,,VPS localization accepted (1st handover),KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:18.1480000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,258.148,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:24.2440000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,264.244,reliability_state,IndoorVps,OutdoorGps,Vps,B9-104,,,,,,,,,,,Exiting indoor volume; reliability threshold crossed toward outdoor,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:24.2440000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,264.244,source_switched,Vps,Pdr,Pdr,B9-104,,,,,,,,,,,Vps->Pdr,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:30.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,270.34,source_switched,Pdr,Gps,Gps,B9-104,,,,,,,,,,,Pdr->Gps; GPS dwell/reliability gate satisfied,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:04:45.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,285.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:05:00.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,300.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:05:15.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,315.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:05:30.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,330.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:05:45.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,345.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:06:00.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,360.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:06:15.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,375.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:06:30.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,390.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:06:45.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,405.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:07:00.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,420.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:07:15.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,435.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:07:30.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,450.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:07:45.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,465.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:00.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,480.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:15.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,495.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:30.3400000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,510.34,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:32.1480000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,512.148,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:34.1800000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,514.18,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=3,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:37.2280000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,517.228,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=6,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:40.2760000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,520.276,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=9,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:43.3240000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,523.324,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=12,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:45.3560000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,525.356,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:45.3560000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,525.356,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,2.0,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:45.6560000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,525.656,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,2.0,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:49.5040000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,529.504,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,2.0,VPS localization accepted (2nd handover),KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:49.5040000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,529.504,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,,VPS localization accepted (2nd handover),KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:49.5040000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,529.504,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:54.5840000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,534.584,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=5,KB29,SYNTHETIC_SUPPORT,1
+2026-09-20T00:08:59.6640000Z,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,539.664,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=10,KB29,SYNTHETIC_SUPPORT,1
+,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,544.744,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=15,KB29,SYNTHETIC_SUPPORT,1
+,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,545.76,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB29,SYNTHETIC_SUPPORT,1
+,SYNTH_KB29_V1_7770_FWD,V1,Fixed Geometric,0,0,0,0,0,545.76,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB29,SYNTHETIC_SUPPORT,1

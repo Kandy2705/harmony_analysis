@@ -1,0 +1,12 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id,data_provenance,synthetic
+2026-09-20T00:00:00.0000000Z,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:00.0000000Z,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,0.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=0,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:10.2400000Z,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,10.24,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=10,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:20.4800000Z,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,20.48,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=20,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:30.7200000Z,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,30.72,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=30,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:40.9600000Z,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,40.96,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=40,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:51.2000000Z,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,51.2,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=50,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:01.4400000Z,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,61.44,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=60,KB09,SYNTHETIC_SUPPORT,1
+,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,71.68,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=70,KB09,SYNTHETIC_SUPPORT,1
+,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,81.92,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=80,KB09,SYNTHETIC_SUPPORT,1
+,SYNTH_KB09_V2_1612_FWD,V2,Reliable Handover,1,1,1,1,0,91.136,trial_finished,,,Gps,B9-104,,,,,,,,,,,user_finished_trial,KB09,SYNTHETIC_SUPPORT,1

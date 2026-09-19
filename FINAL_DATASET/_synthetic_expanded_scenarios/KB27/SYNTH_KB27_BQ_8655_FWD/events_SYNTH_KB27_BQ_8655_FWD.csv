@@ -1,0 +1,22 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id,data_provenance,synthetic
+2026-09-20T00:00:00.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:15.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,15.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:30.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,30.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:45.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,45.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:00.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,60.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:15.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,75.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:30.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,90.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:42.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,102.0,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:44.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,104.0,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=3,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:47.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,107.0,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=6,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:50.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,110.0,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=9,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:53.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,113.0,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=12,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:56.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,116.0,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=15,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:57.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,117.0,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:57.0000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,117.0,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:57.3000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,117.3,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,1.0,,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:00.8000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,120.8,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB27,SYNTHETIC_SUPPORT,1
+2026-09-20T00:02:00.8000000Z,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,120.8,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,,VPS localization accepted,KB27,SYNTHETIC_SUPPORT,1
+,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,120.8,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB27,SYNTHETIC_SUPPORT,1
+,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,123.8,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB27,SYNTHETIC_SUPPORT,1
+,SYNTH_KB27_BQ_8655_FWD,BQ,Quality-Threshold Baseline,1,0,0,0,0,123.8,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB27,SYNTHETIC_SUPPORT,1

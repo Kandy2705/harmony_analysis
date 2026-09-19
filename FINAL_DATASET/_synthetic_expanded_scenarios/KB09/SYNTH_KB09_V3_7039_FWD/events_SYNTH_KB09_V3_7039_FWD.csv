@@ -1,0 +1,12 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id,data_provenance,synthetic
+2026-09-20T00:00:00.0000000Z,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:00.0000000Z,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,0.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=0,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:10.3100000Z,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,10.31,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=10,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:20.6200000Z,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,20.62,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=20,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:30.9300000Z,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,30.93,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=30,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:41.2400000Z,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,41.24,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=40,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:51.5500000Z,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,51.55,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=50,KB09,SYNTHETIC_SUPPORT,1
+2026-09-20T00:01:01.8600000Z,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,61.86,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=60,KB09,SYNTHETIC_SUPPORT,1
+,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,72.17,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=70,KB09,SYNTHETIC_SUPPORT,1
+,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,82.48,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,step=80,KB09,SYNTHETIC_SUPPORT,1
+,SYNTH_KB09_V3_7039_FWD,V3,No Dwell Time,1,0,1,1,0,90.728,trial_finished,,,Gps,B9-104,,,,,,,,,,,user_finished_trial,KB09,SYNTHETIC_SUPPORT,1
