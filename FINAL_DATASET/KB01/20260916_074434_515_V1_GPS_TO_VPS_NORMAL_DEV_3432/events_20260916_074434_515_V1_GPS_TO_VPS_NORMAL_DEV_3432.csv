@@ -1,0 +1,34 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
+2026-09-16T07:44:34.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB01
+2026-09-16T07:44:49.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,15.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:45:04.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,30.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:45:19.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,45.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:45:34.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,60.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:45:49.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,75.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:46:04.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,90.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:46:19.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,105.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:46:34.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,120.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:46:49.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,135.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:47:04.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,150.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:47:19.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,165.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:47:34.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,180.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:47:49.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,195.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:48:04.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,210.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:48:19.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,225.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:48:34.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,240.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:48:34.7920000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,240.792,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB01
+2026-09-16T07:48:36.8240000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,242.824,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=3,KB01
+2026-09-16T07:48:39.8720000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,245.872,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=6,KB01
+2026-09-16T07:48:42.9200000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,248.92,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=9,KB01
+2026-09-16T07:48:45.9680000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,251.968,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=12,KB01
+2026-09-16T07:48:48.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,254.0,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB01
+2026-09-16T07:48:48.0000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,254.0,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB01
+2026-09-16T07:48:48.3000000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,254.3,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,1.0,,KB01
+2026-09-16T07:48:51.3480000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,257.348,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB01
+2026-09-16T07:48:51.3480000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,257.348,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB01
+2026-09-16T07:48:51.3480000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,257.348,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB01
+2026-09-16T07:48:56.4280000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,262.428,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=5,KB01
+2026-09-16T07:49:01.5080000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,267.508,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=10,KB01
+2026-09-16T07:49:06.5880000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,272.588,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=15,KB01
+2026-09-16T07:49:07.6040000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,273.604,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB01
+2026-09-16T07:49:07.6040000Z,20260916_074434_515_V1_GPS_TO_VPS_NORMAL_DEV_3432,V1,Fixed Geometric,0,0,0,0,0,273.604,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB01

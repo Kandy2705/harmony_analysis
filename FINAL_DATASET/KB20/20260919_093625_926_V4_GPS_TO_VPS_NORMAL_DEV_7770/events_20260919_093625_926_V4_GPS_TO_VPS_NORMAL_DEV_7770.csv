@@ -1,0 +1,13 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
+2026-09-19T09:36:25.0000000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,0.0,trial_started,,,Vps,B9-EXIT,,,,,,,,,,,auto=True,KB20
+2026-09-19T09:36:25.0000000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,0.0,app_resumed,,,Vps,B9-EXIT,,,,,,,,,,,,KB20
+2026-09-19T09:36:25.0000000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,0.0,indoor_state,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,auto=True,KB20
+2026-09-19T09:36:40.0000000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,15.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB20
+2026-09-19T09:36:55.0000000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,30.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB20
+2026-09-19T09:36:59.0680000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,34.068,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,route_revision incremented (backtrack); wrong_way_count=1,KB20
+2026-09-19T09:37:10.0000000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,45.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB20
+2026-09-19T09:37:25.0000000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,60.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB20
+2026-09-19T09:37:33.1360000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,68.136,reliability_state,IndoorVps,OutdoorGps,Vps,B9-EXIT,,,,,,,,,,,Exiting indoor volume; reliability threshold crossed toward outdoor,KB20
+2026-09-19T09:37:33.1360000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,68.136,source_switched,Vps,Pdr,Pdr,B9-EXIT,,,,,,,,,,,Vps->Pdr,KB20
+2026-09-19T09:37:40.1540000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,75.154,quality_threshold_passed,,,Pdr,B9-EXIT,,,,,,,,,,,GPS quality threshold passed during reacquisition,KB20
+2026-09-19T09:37:43.1560000Z,20260919_093625_926_V4_GPS_TO_VPS_NORMAL_DEV_7770,V4,No Map-ID Check,1,1,0,1,0,78.156,source_switched,Pdr,Gps,Gps,B9-EXIT,,,,,,,,,,,Pdr->Gps; GPS dwell/reliability gate satisfied,KB20

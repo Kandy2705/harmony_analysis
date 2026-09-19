@@ -1,0 +1,25 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
+2026-09-16T07:37:17.0000000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB01
+2026-09-16T07:37:32.0000000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,15.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:37:47.0000000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,30.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:38:02.0000000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,45.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:38:17.0000000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,60.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:38:32.0000000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,75.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:38:47.0000000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,90.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:38:59.5150000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,102.515,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB01
+2026-09-16T07:39:01.5450000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,104.545,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=3,KB01
+2026-09-16T07:39:04.5900000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,107.59,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=6,KB01
+2026-09-16T07:39:07.6350000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,110.635,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=9,KB01
+2026-09-16T07:39:08.6500000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,111.65,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB01
+2026-09-16T07:39:08.6500000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,111.65,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB01
+2026-09-16T07:39:09.0220000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,112.022,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,1.0,,KB01
+2026-09-16T07:39:12.0670000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,115.067,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB01
+2026-09-16T07:39:12.0670000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,115.067,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB01
+2026-09-16T07:39:12.0670000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,115.067,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB01
+2026-09-16T07:39:17.1420000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,120.142,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=5,KB01
+2026-09-16T07:39:22.2170000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,125.217,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=10,KB01
+2026-09-16T07:39:27.2920000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,130.292,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=15,KB01
+2026-09-16T07:39:32.3670000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,135.367,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=20,KB01
+2026-09-16T07:39:37.4420000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,140.442,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=25,KB01
+2026-09-16T07:39:40.4870000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,143.487,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB01
+2026-09-16T07:39:40.4870000Z,20260916_073717_378_BT_GPS_TO_VPS_NORMAL_DEV_3686,BT,Quality + Dwell Baseline,1,1,0,0,0,143.487,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB01

@@ -1,0 +1,22 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
+2026-09-16T07:30:00.0000000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB01
+2026-09-16T07:30:15.0000000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,15.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:30:30.0000000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,30.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:30:45.0000000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,45.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:31:00.0000000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,60.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:31:15.0000000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,75.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:31:30.0000000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,90.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB01
+2026-09-16T07:31:42.3060000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,102.306,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB01
+2026-09-16T07:31:44.3120000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,104.312,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=3,KB01
+2026-09-16T07:31:47.3210000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,107.321,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=6,KB01
+2026-09-16T07:31:50.3300000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,110.33,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=9,KB01
+2026-09-16T07:31:53.3390000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,113.339,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=12,KB01
+2026-09-16T07:31:56.3480000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,116.348,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=15,KB01
+2026-09-16T07:31:57.3510000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,117.351,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB01
+2026-09-16T07:31:57.3510000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,117.351,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB01
+2026-09-16T07:31:57.6770000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,117.677,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,1.0,,KB01
+2026-09-16T07:32:00.6860000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,120.686,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB01
+2026-09-16T07:32:00.6860000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,120.686,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB01
+2026-09-16T07:32:00.6860000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,120.686,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB01
+2026-09-16T07:32:03.6950000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,123.695,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB01
+2026-09-16T07:32:03.6950000Z,20260916_073000_241_BQ_GPS_TO_VPS_NORMAL_DEV_4605,BQ,Quality-Threshold Baseline,1,0,0,0,0,123.695,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB01

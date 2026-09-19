@@ -1,0 +1,10 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
+2026-09-20T11:13:42.0000000Z,20260920_111342_063_V5_GPS_TO_VPS_NORMAL_DEV_7389,V5,Full HARMONY,1,1,1,1,1,0.0,trial_started,,,Gps,,,,,,,,,,,,auto=True,KB28
+2026-09-20T11:14:15.0990000Z,20260920_111342_063_V5_GPS_TO_VPS_NORMAL_DEV_7389,V5,Full HARMONY,1,1,1,1,1,33.099,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB28
+2026-09-20T11:14:17.1050000Z,20260920_111342_063_V5_GPS_TO_VPS_NORMAL_DEV_7389,V5,Full HARMONY,1,1,1,1,1,35.105,transition_step_checkpoint,,,Pdr,,,,,,,,,,,,step=3,KB28
+2026-09-20T11:14:20.1140000Z,20260920_111342_063_V5_GPS_TO_VPS_NORMAL_DEV_7389,V5,Full HARMONY,1,1,1,1,1,38.114,transition_step_checkpoint,,,Pdr,,,,,,,,,,,,step=6,KB28
+2026-09-20T11:14:22.1200000Z,20260920_111342_063_V5_GPS_TO_VPS_NORMAL_DEV_7389,V5,Full HARMONY,1,1,1,1,1,40.12,reliability_state,EnteringWithPdr,VpsScanning,Pdr,,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB28
+2026-09-20T11:14:22.1200000Z,20260920_111342_063_V5_GPS_TO_VPS_NORMAL_DEV_7389,V5,Full HARMONY,1,1,1,1,1,40.12,vps_state,,StartingVps,Pdr,,,,,,,,,,,1.0,,KB28
+2026-09-20T11:14:24.2640000Z,20260920_111342_063_V5_GPS_TO_VPS_NORMAL_DEV_7389,V5,Full HARMONY,1,1,1,1,1,42.264,reliability_state,VpsScanning,OutdoorGps,Gps,,,,,,,,,,,,navigation cancelled before valid VPS localization; user turned away from B9 scan zone,KB28
+2026-09-20T11:14:24.2640000Z,20260920_111342_063_V5_GPS_TO_VPS_NORMAL_DEV_7389,V5,Full HARMONY,1,1,1,1,1,42.264,outdoor_state,,RouteUnavailable,Gps,,,,,,,,,,,,,KB28
+2026-09-20T11:14:28.2760000Z,20260920_111342_063_V5_GPS_TO_VPS_NORMAL_DEV_7389,V5,Full HARMONY,1,1,1,1,1,46.276,trial_finished,,,Gps,,,,,,,,,,,,user_cancelled_navigation,KB28

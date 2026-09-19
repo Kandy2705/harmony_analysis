@@ -1,0 +1,26 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
+2026-09-20T13:43:42.0000000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB29
+2026-09-20T13:44:15.0990000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,33.099,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB29
+2026-09-20T13:44:17.1050000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,35.105,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=3,KB29
+2026-09-20T13:44:20.1140000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,38.114,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=6,KB29
+2026-09-20T13:44:22.1200000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,40.12,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB29
+2026-09-20T13:44:22.1200000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,40.12,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB29
+2026-09-20T13:44:22.4200000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,40.42,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,1.0,,KB29
+2026-09-20T13:44:26.2290000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,44.229,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted (1st handover),KB29
+2026-09-20T13:44:26.2290000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,44.229,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,,VPS localization accepted (1st handover),KB29
+2026-09-20T13:44:26.2290000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,44.229,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB29
+2026-09-20T13:44:32.2470000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,50.247,reliability_state,IndoorVps,OutdoorGps,Vps,B9-104,,,,,,,,,,,Exiting indoor volume; reliability threshold crossed toward outdoor,KB29
+2026-09-20T13:44:32.2470000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,50.247,source_switched,Vps,Pdr,Pdr,B9-104,,,,,,,,,,,Vps->Pdr,KB29
+2026-09-20T13:44:40.2710000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,58.271,source_switched,Pdr,Gps,Gps,B9-104,,,,,,,,,,,Pdr->Gps; GPS dwell/reliability gate satisfied,KB29
+2026-09-20T13:45:14.3730000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,92.373,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB29
+2026-09-20T13:45:16.3790000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,94.379,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=3,KB29
+2026-09-20T13:45:19.3880000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,97.388,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=6,KB29
+2026-09-20T13:45:21.3940000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,99.394,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB29
+2026-09-20T13:45:21.3940000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,99.394,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,2.0,,KB29
+2026-09-20T13:45:21.6940000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,99.694,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,2.0,,KB29
+2026-09-20T13:45:25.5030000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,103.503,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,2.0,VPS localization accepted (2nd handover),KB29
+2026-09-20T13:45:25.5030000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,103.503,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,,VPS localization accepted (2nd handover),KB29
+2026-09-20T13:45:25.5030000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,103.503,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB29
+2026-09-20T13:45:30.5180000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,108.518,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=5,KB29
+2026-09-20T13:45:31.5210000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,109.521,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB29
+2026-09-20T13:45:31.5210000Z,20260920_134342_063_V5_GPS_TO_VPS_NORMAL_DEV_1159,V5,Full HARMONY,1,1,1,1,1,109.521,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB29

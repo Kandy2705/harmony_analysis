@@ -1,0 +1,21 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
+2026-09-18T14:59:08.0000000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB13
+2026-09-18T14:59:23.0000000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,15.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB13
+2026-09-18T14:59:38.0000000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,30.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB13
+2026-09-18T14:59:53.0000000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,45.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB13
+2026-09-18T15:00:08.0000000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,60.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB13
+2026-09-18T15:00:23.0000000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,75.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB13
+2026-09-18T15:00:38.0000000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,90.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB13
+2026-09-18T15:00:53.0000000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,105.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB13
+2026-09-18T15:01:00.5540000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,112.554,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB13
+2026-09-18T15:01:02.5820000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,114.582,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB13
+2026-09-18T15:01:02.5820000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,114.582,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB13
+2026-09-18T15:01:02.8820000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,114.882,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,1.0,,KB13
+2026-09-18T15:01:07.6520000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,119.652,quality_threshold_failed,,,Pdr,B9-104,,,,,,,,,,,vps_confidence near minimumVpsConfidence=0.50 under glare; changing scan angle,KB13
+2026-09-18T15:01:08.6520000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,120.652,quality_threshold_passed,,,Pdr,B9-104,,,,,,,,,,,scan angle adjusted away from glare,KB13
+2026-09-18T15:01:11.4800000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,123.48,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB13
+2026-09-18T15:01:11.4800000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,123.48,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,,VPS localization accepted,KB13
+2026-09-18T15:01:11.4800000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,123.48,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB13
+2026-09-18T15:01:16.5500000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,128.55,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=5,KB13
+2026-09-18T15:01:18.5780000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,130.578,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB13
+2026-09-18T15:01:18.5780000Z,20260918_145908_789_V3_GPS_TO_VPS_NORMAL_DEV_2725,V3,No Dwell Time,1,0,1,1,0,130.578,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB13

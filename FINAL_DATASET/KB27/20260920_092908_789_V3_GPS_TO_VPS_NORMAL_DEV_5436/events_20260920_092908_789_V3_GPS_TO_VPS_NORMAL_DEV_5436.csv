@@ -1,0 +1,19 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
+2026-09-20T09:29:08.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB27
+2026-09-20T09:29:23.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,15.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27
+2026-09-20T09:29:38.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,30.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27
+2026-09-20T09:29:53.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,45.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27
+2026-09-20T09:30:08.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,60.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27
+2026-09-20T09:30:23.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,75.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27
+2026-09-20T09:30:38.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,90.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27
+2026-09-20T09:30:53.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,105.0,transition_step_checkpoint,,,Gps,B9-104,,,,,,,,,,,periodic navigation checkpoint,KB27
+2026-09-20T09:30:59.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,111.0,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB27
+2026-09-20T09:31:01.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,113.0,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB27
+2026-09-20T09:31:01.0000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,113.0,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB27
+2026-09-20T09:31:01.3000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,113.3,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,1.0,,KB27
+2026-09-20T09:31:04.8000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,116.8,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB27
+2026-09-20T09:31:04.8000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,116.8,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,,VPS localization accepted,KB27
+2026-09-20T09:31:04.8000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,116.8,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB27
+2026-09-20T09:31:09.8000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,121.8,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=5,KB27
+2026-09-20T09:31:11.8000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,123.8,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB27
+2026-09-20T09:31:11.8000000Z,20260920_092908_789_V3_GPS_TO_VPS_NORMAL_DEV_5436,V3,No Dwell Time,1,0,1,1,0,123.8,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB27

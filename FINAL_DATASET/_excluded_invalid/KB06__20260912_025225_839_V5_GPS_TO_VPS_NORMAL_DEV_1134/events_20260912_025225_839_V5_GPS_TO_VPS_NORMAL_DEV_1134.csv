@@ -1,2 +1,0 @@
-utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
-2026-09-12T02:52:25.8413200Z,20260912_025225_839_V5_GPS_TO_VPS_NORMAL_DEV_1134,V5,Full HARMONY,1,1,1,1,1,0,trial_started,,,Gps,B9-104,0.0,0.0,,0,0,0,36.279,-2.832,174.86,0,auto=True,KB06

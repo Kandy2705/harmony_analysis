@@ -17,8 +17,25 @@ else
     PYTHON="python"
 fi
 
-DATA_DIR="${1:-sample_data}"
-OUTPUT_DIR="${2:-./analysis_output}"
+# Auto-detect data directory
+if [ -n "$1" ]; then
+    DATA_DIR="$1"
+elif [ -d "FINAL_DATASET" ]; then
+    DATA_DIR="FINAL_DATASET"
+elif [ -d "sample_data" ]; then
+    DATA_DIR="sample_data"
+else
+    DATA_DIR="."
+fi
+
+# Auto-detect output directory
+if [ -n "$2" ]; then
+    OUTPUT_DIR="$2"
+elif [ "$DATA_DIR" = "FINAL_DATASET" ]; then
+    OUTPUT_DIR="FINAL_DATASET/analysis_output"
+else
+    OUTPUT_DIR="./analysis_output"
+fi
 
 echo "============================================================"
 echo "🚀 HARMONY Analysis Pipeline"

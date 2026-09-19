@@ -1,0 +1,10 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
+2026-09-17T13:36:25.0000000Z,20260917_133625_926_V4_GPS_TO_VPS_NORMAL_DEV_6790,V4,No Map-ID Check,1,1,0,1,0,0.0,trial_started,,,Vps,B9-EXIT,,,,,,,,,,,auto=True,KB02
+2026-09-17T13:36:25.0000000Z,20260917_133625_926_V4_GPS_TO_VPS_NORMAL_DEV_6790,V4,No Map-ID Check,1,1,0,1,0,0.0,app_resumed,,,Vps,B9-EXIT,,,,,,,,,,,,KB02
+2026-09-17T13:36:25.0000000Z,20260917_133625_926_V4_GPS_TO_VPS_NORMAL_DEV_6790,V4,No Map-ID Check,1,1,0,1,0,0.0,indoor_state,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,auto=True,KB02
+2026-09-17T13:36:40.0000000Z,20260917_133625_926_V4_GPS_TO_VPS_NORMAL_DEV_6790,V4,No Map-ID Check,1,1,0,1,0,15.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB02
+2026-09-17T13:36:55.0000000Z,20260917_133625_926_V4_GPS_TO_VPS_NORMAL_DEV_6790,V4,No Map-ID Check,1,1,0,1,0,30.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB02
+2026-09-17T13:37:07.0840000Z,20260917_133625_926_V4_GPS_TO_VPS_NORMAL_DEV_6790,V4,No Map-ID Check,1,1,0,1,0,42.084,reliability_state,IndoorVps,OutdoorGps,Vps,B9-EXIT,,,,,,,,,,,Exiting indoor volume; reliability threshold crossed toward outdoor,KB02
+2026-09-17T13:37:07.0840000Z,20260917_133625_926_V4_GPS_TO_VPS_NORMAL_DEV_6790,V4,No Map-ID Check,1,1,0,1,0,42.084,source_switched,Vps,Pdr,Pdr,B9-EXIT,,,,,,,,,,,Vps->Pdr,KB02
+2026-09-17T13:37:14.1020000Z,20260917_133625_926_V4_GPS_TO_VPS_NORMAL_DEV_6790,V4,No Map-ID Check,1,1,0,1,0,49.102,quality_threshold_passed,,,Pdr,B9-EXIT,,,,,,,,,,,GPS quality threshold passed during reacquisition,KB02
+2026-09-17T13:37:18.1060000Z,20260917_133625_926_V4_GPS_TO_VPS_NORMAL_DEV_6790,V4,No Map-ID Check,1,1,0,1,0,53.106,source_switched,Pdr,Gps,Gps,B9-EXIT,,,,,,,,,,,Pdr->Gps; GPS dwell/reliability gate satisfied,KB02

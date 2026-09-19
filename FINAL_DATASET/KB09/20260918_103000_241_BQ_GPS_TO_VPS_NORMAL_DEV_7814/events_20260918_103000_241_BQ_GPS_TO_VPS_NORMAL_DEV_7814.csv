@@ -1,0 +1,11 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id
+2026-09-18T10:30:00.0000000Z,20260918_103000_241_BQ_GPS_TO_VPS_NORMAL_DEV_7814,BQ,Quality-Threshold Baseline,1,0,0,0,0,0.0,trial_started,,,Gps,B9-EXIT,,,,,,,,,,,auto=True,KB09
+2026-09-18T10:30:00.0000000Z,20260918_103000_241_BQ_GPS_TO_VPS_NORMAL_DEV_7814,BQ,Quality-Threshold Baseline,1,0,0,0,0,0.0,transition_step_checkpoint,,,Gps,B9-EXIT,,,,,,,,,,,step=0,KB09
+2026-09-18T10:30:10.2600000Z,20260918_103000_241_BQ_GPS_TO_VPS_NORMAL_DEV_7814,BQ,Quality-Threshold Baseline,1,0,0,0,0,10.26,transition_step_checkpoint,,,Gps,B9-EXIT,,,,,,,,,,,step=10,KB09
+2026-09-18T10:30:20.5200000Z,20260918_103000_241_BQ_GPS_TO_VPS_NORMAL_DEV_7814,BQ,Quality-Threshold Baseline,1,0,0,0,0,20.52,transition_step_checkpoint,,,Gps,B9-EXIT,,,,,,,,,,,step=20,KB09
+2026-09-18T10:30:30.7800000Z,20260918_103000_241_BQ_GPS_TO_VPS_NORMAL_DEV_7814,BQ,Quality-Threshold Baseline,1,0,0,0,0,30.78,transition_step_checkpoint,,,Gps,B9-EXIT,,,,,,,,,,,step=30,KB09
+2026-09-18T10:30:41.0400000Z,20260918_103000_241_BQ_GPS_TO_VPS_NORMAL_DEV_7814,BQ,Quality-Threshold Baseline,1,0,0,0,0,41.04,transition_step_checkpoint,,,Gps,B9-EXIT,,,,,,,,,,,step=40,KB09
+2026-09-18T10:30:51.3000000Z,20260918_103000_241_BQ_GPS_TO_VPS_NORMAL_DEV_7814,BQ,Quality-Threshold Baseline,1,0,0,0,0,51.3,transition_step_checkpoint,,,Gps,B9-EXIT,,,,,,,,,,,step=50,KB09
+2026-09-18T10:31:01.5600000Z,20260918_103000_241_BQ_GPS_TO_VPS_NORMAL_DEV_7814,BQ,Quality-Threshold Baseline,1,0,0,0,0,61.56,transition_step_checkpoint,,,Gps,B9-EXIT,,,,,,,,,,,step=60,KB09
+2026-09-18T10:31:11.8200000Z,20260918_103000_241_BQ_GPS_TO_VPS_NORMAL_DEV_7814,BQ,Quality-Threshold Baseline,1,0,0,0,0,71.82,transition_step_checkpoint,,,Gps,B9-EXIT,,,,,,,,,,,step=70,KB09
+2026-09-18T10:31:15.9240000Z,20260918_103000_241_BQ_GPS_TO_VPS_NORMAL_DEV_7814,BQ,Quality-Threshold Baseline,1,0,0,0,0,75.924,trial_finished,,,Gps,B9-EXIT,,,,,,,,,,,user_finished_trial,KB09
