@@ -35,7 +35,8 @@ def _bar_with_ci(ax, labels, values, ci_low, ci_high, ns, ylabel, title, colors)
     yerr_high = np.clip(yerr_high, 0, None)
     ax.bar(x, values, color=colors, yerr=[yerr_low, yerr_high], capsize=4)
     ax.set_xticks(x)
-    ax.set_xticklabels([f"{l}\n(N={n})" for l, n in zip(labels, ns)], rotation=0)
+    rot = 45 if len(labels) > 7 else 0
+    ax.set_xticklabels([f"{l}\n(N={n})" for l, n in zip(labels, ns)], rotation=rot, ha="right" if rot else "center")
     ax.set_ylabel(ylabel)
     ax.set_title(title)
     ax.grid(axis="y", alpha=0.3)
@@ -116,6 +117,8 @@ def plot_source_switching(agg: pd.DataFrame, out_dir: Path, cfg: dict) -> None:
     labels = _labels_from_group(agg)
     colors = _palette(len(agg), cfg)
     ax.bar(labels, agg[col].fillna(0), color=colors)
+    if len(labels) > 7:
+        ax.tick_params(axis="x", labelrotation=45)
     ax.set_ylabel("Mean source transitions per trial")
     ax.set_title("Source Switching by Version / Direction")
     ax.grid(axis="y", alpha=0.3)

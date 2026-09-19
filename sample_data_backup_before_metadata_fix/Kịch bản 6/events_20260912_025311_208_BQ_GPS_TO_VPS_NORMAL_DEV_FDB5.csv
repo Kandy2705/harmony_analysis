@@ -1,0 +1,2 @@
+﻿utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note
+2026-09-12T02:53:11.2091990Z,20260912_025311_208_BQ_GPS_TO_VPS_NORMAL_DEV_FDB5,BQ,Quality-Threshold Baseline,1,0,0,0,0,0,trial_started,,,Gps,B9-104,0.0000000,0.0000000,,0,0,0,36.279,-2.832,174.86,0,auto=True

@@ -159,6 +159,7 @@ def compute_trial_metrics(trial: TrialFiles, cfg: dict) -> Dict[str, Any]:
     row["harmony_version"] = _safe_first(ev_df, "harmony_version", _safe_first(su_df, "harmony_version"))
     row["harmony_profile"] = _safe_first(ev_df, "harmony_profile", _safe_first(su_df, "harmony_profile"))
     row["direction"] = _infer_direction(ev_df, su_df, cfg)
+    row["scenario_id"] = _safe_first(su_df, "scenario_id", _safe_first(ev_df, "scenario_id", _safe_first(sm_df, "scenario_id")))
     row["destination"] = _safe_first(su_df, "destination", _safe_first(ev_df, "destination"))
     row["duration_s"] = float(_safe_first(su_df, "duration_s", ev_df["elapsed_s"].max()))
     row["start_utc"] = _safe_first(su_df, "start_utc", _safe_first(ev_df, "utc_iso"))
@@ -179,7 +180,12 @@ def compute_trial_metrics(trial: TrialFiles, cfg: dict) -> Dict[str, Any]:
     if not timeline.handover_attempts:
         row["handover_success_reconstructed"] = np.nan
         row["handover_latency_s"] = np.nan
-        row["handover_note"] = f"{NOT_EVALUABLE}: direction unknown or unsupported ({row['direction']})."
+        if row["direction"] == "NONE":
+            row["handover_note"] = f"{NOT_EVALUABLE}: non-handover scenario."
+        elif row["direction"] == "MULTI_HANDOVER":
+            row["handover_note"] = f"{NOT_EVALUABLE}: multi-handover scenario."
+        else:
+            row["handover_note"] = f"{NOT_EVALUABLE}: direction unknown or unsupported ({row['direction']})."
         primary_handover = None
     else:
         primary_handover = timeline.handover_attempts[0]
