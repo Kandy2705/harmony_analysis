@@ -1,0 +1,150 @@
+# ============================================================
+# HARMONY Handover Analysis — configurable KPI definitions
+# ============================================================
+# Edit this file to change KPI/rule definitions WITHOUT touching
+# the core analysis code. All keys below are read by
+# harmony_analysis/metrics.py, events.py, validation.py.
+
+# ------------------------------------------------------------
+# 1. File discovery
+# ------------------------------------------------------------
+discovery:
+  events_glob: "events_*.csv"
+  samples_glob: "samples_*.csv"
+  summary_glob: "summary_*.csv"
+  # session_id is read from inside the CSVs (column 'session_id'),
+  # never inferred from folder names.
+
+# ------------------------------------------------------------
+# 2. Event vocabulary (from real logger output)
+# ------------------------------------------------------------
+events:
+  trial_started: "trial_started"
+  app_paused: "app_paused"
+  app_resumed: "app_resumed"
+  outdoor_state: "outdoor_state"
+  indoor_state: "indoor_state"
+  quality_threshold_passed: "quality_threshold_passed"
+  quality_threshold_failed: "quality_threshold_failed"
+  reliability_state: "reliability_state"
+  source_switched: "source_switched"
+  vps_state: "vps_state"
+  transition_step_checkpoint: "transition_step_checkpoint"
+  indoor_step_checkpoint: "indoor_step_checkpoint"
+
+  # Events that mark a VPS handover that did NOT truly succeed
+  # (fallback to PDR-approximate pose after VPS did not localize
+  # in time). ANY of these events occurring means the VPS branch
+  # of a GPS_TO_VPS handover must be scored as a FAILURE, even if
+  # the FSM to_state afterwards is "IndoorVps".
+  vps_fallback_events:
+    - "pdr_approximate_localization"
+    - "handover_completed_approximate"
+    - "pdr_approximate_handover_completed"
+
+  # If a genuine (non-fallback) VPS acceptance event exists in your
+  # logger, name it here. Leave empty to rely purely on state-based
+  # detection (to_state == vps_success_state AND no fallback event
+  # fired for that attempt).
+  vps_success_event: ""
+
+# Text patterns (case-insensitive substring match) in the `note`
+# column that also indicate a non-genuine / fallback acceptance,
+# used as a secondary safety net in addition to vps_fallback_events.
+fallback_note_patterns:
+  - "vps timeout"
+  - "not accepted"
+  - "approximate pose"
+
+# ------------------------------------------------------------
+# 3. State vocabulary
+# ------------------------------------------------------------
+states:
+  vps_starting_state: "StartingVps"     # vps_state to_state
+  vps_scanning_state: "Scanning"        # vps_state to_state
+  vps_localized_state: "IndoorLocalized" # vps_state to_state (necessary, not sufficient for success)
+  vps_scanning_fsm_state: "VpsScanning"  # outdoor/reliability_state to_state during scan
+  indoor_target_state: "IndoorVps"       # outdoor/reliability_state to_state on completion (real or fallback)
+  outdoor_target_state: "OutdoorGps"      # target state for VPS_TO_GPS direction
+  entering_pdr_state: "EnteringWithPdr"
+
+# ------------------------------------------------------------
+# 4. Sources
+# ------------------------------------------------------------
+sources:
+  gps: "Gps"
+  pdr: "Pdr"
+  vps: "Vps"   # not seen as a literal `source` value in sample logs
+               # (VPS acceptance is expressed via state, not `source`
+               # column) — kept here for forward compatibility.
+
+# ------------------------------------------------------------
+# 5. Direction-specific handover definitions
+# ------------------------------------------------------------
+directions:
+  GPS_TO_VPS:
+    origin_source: "Gps"
+    target_source: "Vps"
+    # handover clock starts at the reliability_state transition into
+    # the VPS-scanning FSM state (entering true handover volume)
+    start_event: "reliability_state"
+    start_to_state: "VpsScanning"
+    # handover clock ends at vps_state -> vps_localized_state,
+    # but is only "success" if not accompanied by a fallback event
+    # at (approximately) the same elapsed_s.
+    end_event: "vps_state"
+    end_to_state: "IndoorLocalized"
+  VPS_TO_GPS:
+    origin_source: "Vps"
+    target_source: "Gps"
+    start_event: "reliability_state"
+    start_to_state: "OutdoorGps"
+    end_event: "source_switched"
+    end_to_state: "Gps"
+
+# ------------------------------------------------------------
+# 6. VPS timeout handling
+# ------------------------------------------------------------
+vps:
+  timeout_s: 30.0   # from note text "30s VPS timeout" in sample data;
+                     # override if your logger uses a different value.
+  # A VPS "attempt" starts at vps_state -> vps_starting_state and ends
+  # at the next vps_state -> vps_localized_state OR a vps_fallback_event
+  # OR trial end, whichever comes first.
+
+# ------------------------------------------------------------
+# 7. Oscillation / false-handover window
+# ------------------------------------------------------------
+oscillation:
+  # A "false / premature handover" = the newly accepted source is
+  # reverted back to the previous source within this many seconds.
+  revert_window_s: 8.0
+  # An "oscillation" episode = >= min_switches source_switched events
+  # within a rolling window of window_s seconds.
+  window_s: 15.0
+  min_switches: 3
+
+# ------------------------------------------------------------
+# 8. Minimum data requirements for a trial to be evaluable
+# ------------------------------------------------------------
+validation:
+  min_samples: 5
+  min_events: 5
+  max_allowed_gap_s: 60.0     # gap between consecutive elapsed_s considered suspicious
+  require_monotonic_elapsed: true
+
+# ------------------------------------------------------------
+# 9. Aggregation / statistics
+# ------------------------------------------------------------
+aggregate:
+  group_by: ["harmony_version", "direction"]   # extra keys (e.g. "scenario") appended if present
+  confidence_level: 0.95
+  min_n_for_ci: 2
+
+# ------------------------------------------------------------
+# 10. Plotting
+# ------------------------------------------------------------
+plotting:
+  dpi: 150
+  style: "seaborn-v0_8-whitegrid"
+  color_palette: "colorblind"   # matplotlib/seaborn palette name, not fixed hex colors
