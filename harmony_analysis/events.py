@@ -128,7 +128,7 @@ def reconstruct_vps_attempts(events_df: pd.DataFrame, cfg: dict, trial_end_s: fl
 
         # scanning_s: first Scanning event after this start, before the next start
         later_starts = starts[starts["elapsed_s"] > start_s]["elapsed_s"]
-        next_start_s = float(later_starts.min()) if not later_starts.empty else trial_end_s
+        next_start_s = float(later_starts.min()) if not later_starts.empty else (trial_end_s + 0.001)
         scan_candidates = scanning[(scanning["elapsed_s"] >= start_s) & (scanning["elapsed_s"] < next_start_s)]
         scanning_s = float(scan_candidates["elapsed_s"].min()) if not scan_candidates.empty else None
 

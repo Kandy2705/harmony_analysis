@@ -247,11 +247,11 @@ def compute_trial_metrics(trial: TrialFiles, cfg: dict) -> Dict[str, Any]:
     row["vps_attempts_success"] = sum(1 for a in attempts if a.outcome == "success")
     row["vps_attempts_timeout"] = sum(1 for a in attempts if a.outcome == "timeout_fallback")
     row["vps_attempts_unresolved"] = sum(1 for a in attempts if a.outcome == "unresolved")
-    scan_durations = [a.scan_duration_s for a in attempts if a.scan_duration_s is not None]
+    scan_durations = [a.scan_duration_s for a in attempts if a.outcome == "success" and a.scan_duration_s is not None]
     row.update(_stats_block(pd.Series(scan_durations), "vps_localization_time_s"))
     if attempts:
         last_attempt = attempts[-1]
-        row["vps_localization_time_last_s"] = last_attempt.scan_duration_s
+        row["vps_localization_time_last_s"] = last_attempt.scan_duration_s if last_attempt.outcome == "success" else np.nan
         row["vps_localization_outcome_last"] = last_attempt.outcome
     else:
         row["vps_localization_time_last_s"] = np.nan
@@ -264,8 +264,8 @@ def compute_trial_metrics(trial: TrialFiles, cfg: dict) -> Dict[str, Any]:
     else:
         row["pdr_transition_duration_s"] = np.nan
 
-    # ---------------- Reliability at acceptance ----------------
-    if primary_handover is not None and primary_handover.end_s is not None:
+    # ---------------- Reliability at acceptance & jumps (only on SUCCESSFUL handovers) ----------------
+    if primary_handover is not None and primary_handover.end_s is not None and bool(primary_handover.success):
         at_accept = sm_df[sm_df["elapsed_s"] <= primary_handover.end_s]
         if not at_accept.empty:
             last = at_accept.iloc[-1]

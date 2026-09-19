@@ -53,6 +53,10 @@ CONTINUOUS_METRICS = [
     "heading_jump_deg_reconstructed",
     "source_transitions_total",
     "unnecessary_source_switches",
+    "vps_confidence_available_rate_percent",
+    "vps_map_id_available_rate_percent",
+    "vps_map_match_rate_percent",
+    "vps_reliability_mean_when_valid",
 ]
 
 RATE_METRICS = [
@@ -157,5 +161,6 @@ def build_paper_metrics(aggregate_df: pd.DataFrame, cfg: dict) -> pd.DataFrame:
             "VPS_localization_time_s_mean": r.get("vps_localization_time_s_mean_mean"),
             "PDR_transition_duration_s_mean": r.get("pdr_transition_duration_s_mean"),
             "Position_jump_m_mean": r.get("position_jump_m_reconstructed_mean"),
+            "Heading_jump_deg_mean": r.get("heading_jump_deg_reconstructed_mean"),
         })
     return pd.DataFrame(rows)
