@@ -1,0 +1,14 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id,data_provenance,synthetic
+2026-09-20T00:00:00.0000000Z,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,0.0,trial_started,,,Gps,B9-104,,,,,,,,,,,auto=True,KB01,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:33.0990000Z,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,33.099,reliability_state,OutdoorGps,EnteringWithPdr,Pdr,B9-104,,,,,,,,,,,entered outer B9 volume; GPS correction frozen,KB01,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:35.1050000Z,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,35.105,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=3,KB01,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:38.1140000Z,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,38.114,transition_step_checkpoint,,,Pdr,B9-104,,,,,,,,,,,step=6,KB01,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:40.1200000Z,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,40.12,reliability_state,EnteringWithPdr,VpsScanning,Pdr,B9-104,,,,,,,,,,,Reliability threshold passed; start VPS scanning,KB01,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:40.1200000Z,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,40.12,vps_state,,StartingVps,Pdr,B9-104,,,,,,,,,,1.0,,KB01,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:40.5360000Z,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,40.536,vps_state,,Scanning,Pdr,B9-104,,,,,,,,,,1.0,,KB01,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:43.5450000Z,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,43.545,vps_state,,IndoorLocalized,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB01,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:43.5450000Z,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,43.545,reliability_state,VpsScanning,IndoorVps,Vps,B9-104,,,,,,,,,,1.0,VPS localization accepted,KB01,SYNTHETIC_SUPPORT,1
+2026-09-20T00:00:43.5450000Z,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,43.545,indoor_state,,Navigating,Vps,B9-104,,,,,,,,,,,,KB01,SYNTHETIC_SUPPORT,1
+,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,48.56,indoor_step_checkpoint,,,Vps,B9-104,,,,,,,,,,,step=5,KB01,SYNTHETIC_SUPPORT,1
+,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,49.563,destination_arrived,,Arrived,Vps,B9-104,,,,,,,,,,,B9-104,KB01,SYNTHETIC_SUPPORT,1
+,SYNTH_KB01_V5_8420_FWD,V5,Full HARMONY,1,1,1,1,1,49.563,trial_finished,,,Vps,B9-104,,,,,,,,,,,user_finished_trial,KB01,SYNTHETIC_SUPPORT,1

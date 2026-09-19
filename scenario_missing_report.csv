@@ -1,0 +1,7 @@
+scenario_id,status,reason,missing_required_instrumentation,real_trial_count,synthetic_generated
+KB12,MISSING_UNREPRESENTABLE,rain / wet-surface condition is not instrumented in the logger.,"no weather/precipitation/surface-condition field exists anywhere in summary_*.csv, events_*.csv, or samples_*.csv",0,0
+KB13,MISSING_UNREPRESENTABLE,bright sunlight / glare is not instrumented.,no lighting/glare/ambient-light condition field exists anywhere in the schema,0,0
+KB15,MISSING_UNREPRESENTABLE,crowd / dynamic visual occlusion is not explicitly logged.,no crowd-density or occlusion-source field exists; a generic VPS confidence drop cannot be attributed specifically to crowd occlusion without an observed condition field,0,0
+KB23,MISSING_UNREPRESENTABLE,temporary camera obstruction is not explicitly logged.,no camera-obstruction/lens-covered condition field exists; a generic tracking degradation cannot be claimed to have been caused by camera obstruction without an observed condition field,0,0
+KB26,MISSING_UNREPRESENTABLE,novice-user status and the required behavioral outcomes are not logged.,"no user-experience-level field exists, and 'help requests' / 'trust' are not logged anywhere in the schema",0,0
+KB27,MISSING_UNREPRESENTABLE,experienced-user status and the required behavioral outcomes are not logged.,"no user-experience-level field exists, and no 'AR on/off' comparison arm exists anywhere in this HARMONY handover log schema",0,0
