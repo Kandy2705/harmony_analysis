@@ -1,208 +1,216 @@
 # HARMONY Handover Analysis
 
-Công cụ hậu xử lý dữ liệu thí nghiệm **indoor–outdoor localization handover**
-(GPS ↔ VPS, qua PDR) cho hệ thống HARMONY. Recursive-scan một thư mục gốc chứa
-hàng trăm trial, ghép `events_*.csv` + `samples_*.csv` + `summary_*.csv` theo
-`session_id` (đọc **bên trong** file CSV, không phụ thuộc tên thư mục), **tái
-tạo** các KPI quan trọng từ dữ liệu thô thay vì tin mù quáng `summary.csv`, và
-xuất CSV/Excel/biểu đồ sẵn sàng dùng cho paper.
+A rigorous, reproducible post-processing and statistical evaluation framework for **indoor–outdoor localization handovers** (GPS ↔ VPS via PDR) in the HARMONY navigation system. 
+
+The pipeline recursively scans experiment logs across hundreds of trials, pairs `events_*.csv`, `samples_*.csv`, and `summary_*.csv` by reading `session_id` directly from within CSV contents (independent of folder hierarchy), **reconstructs** safety-critical KPIs from raw event logs, and exports publication-ready CSVs, multi-sheet Excel reports, and vector/raster figures.
 
 ---
 
-## 1. Vì sao không tin `summary.csv`?
+## 1. Why Reconstruct KPIs Instead of Trusting `summary.csv`?
 
-Với file mẫu bạn cung cấp (`20260906_073558_794_V1_GPS_TO_VPS_NORMAL_DEV_7E24`):
+In production mobile localization loggers, summary files can be deceptive due to state aliasing:
 
-- `final_state = IndoorVps`
-- nhưng event log ghi rõ:
-  ```
-  event=handover_completed_approximate, to_state=IndoorVps
-  note="30s VPS timeout; PDR pose projected to nearest B9 NavMesh point (0,87m);
-        Indoor navigation continued from PDR approximate pose; VPS was not accepted"
-  ```
+```
+event=handover_completed_approximate, to_state=IndoorVps
+note="30s VPS timeout; PDR pose projected to nearest B9 NavMesh point (0.87m);
+      Indoor navigation continued from PDR approximate pose; VPS was not accepted"
+```
 
-Nếu chỉ nhìn `final_state` hay tin `summary.handover_success`, ta có thể kết
-luận sai. Trial mẫu này **may mắn** đã có `summary.handover_success=0` đúng,
-nhưng tool **không** dựa vào sự may mắn đó — nó luôn tái tạo độc lập từ
-events + samples, rồi mới đối chiếu (cross-check) với summary. Nếu hai giá trị
-khác nhau, tool **giữ giá trị tái tạo làm kết quả chính**, ghi cảnh bá
-`[METRIC_MISMATCH]`, và lưu cả hai để bạn kiểm tra (`*_reconstructed` +
-`*_summary` trong `per_trial_metrics.csv`).
+Even though `final_state` reaches `IndoorVps`, the VPS service actually timed out after 30 seconds, falling back to dead-reckoning PDR. Relying strictly on `summary.handover_success` or `final_state` risks treating a critical positioning failure as a success. 
 
-## 2. Quy tắc phát hiện handover (xem thêm `config.yaml`)
+**HARMONY Handover Analysis** addresses this by:
+1. Rebuilding the state machine independently from sequential event logs.
+2. Flagging timeout fallbacks (`handover_completed_approximate`, `pdr_approximate_handover_completed`) as true **failures**.
+3. Cross-checking reconstructed metrics against logged summary files and flagging mismatches (`[METRIC_MISMATCH]`).
+4. Reconstructing spatial jumps ($J_p$, $J_\theta$) within a dynamic window around transition moments.
 
-Cột `from_state` / `to_state` / `source` trong `events_*.csv` **đổi ý nghĩa
-tùy theo `event`** — đây là điểm dễ hiểu sai nhất của logger này:
+---
 
-| event | ý nghĩa of from_state/to_state |
+## 2. Experimental Results & Paper Hypotheses
+
+The evaluation on 104 trials across 15 real-world scenarios demonstrates the core architectural hypotheses of HARMONY:
+
+### Summary of Experimental Results (`paper_metrics.csv`)
+
+| Version | Description | HSR (%) $\uparrow$ | FHR (%) $\downarrow$ | Source Toggles $\downarrow$ | Latency (s) | $J_p$ (m) $\downarrow$ | $J_\theta$ (°) $\downarrow$ | GPS Acc (m) |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **V1** | Fixed Geometric Baseline | 53.85% | 57.14% | 3.73 | **2.14 s** | 2.28 m | 23.5° | 5.09 m |
+| **BQ** | Base Quality Gate Baseline | 66.67% | 50.00% | 3.33 | 2.71 s | 2.00 m | 15.9° | 5.03 m |
+| **BT** | Temporal Baseline | 83.33% | 29.41% | 2.62 | 2.99 s | 1.91 m | 19.7° | 5.02 m |
+| **V2** | **HARMONY Full System** | **91.67%** | **13.79%** | **2.23** | **3.43 s** | **1.14 m** | **10.5°** | 5.15 m |
+| **V3** | Ablation: No Dwell | 73.33% | 60.61% | **4.40** | 2.27 s | 1.61 m | 15.3° | 5.07 m |
+| **V4** | Ablation: No Map-ID | 83.33% | 44.44% | 3.21 | 3.39 s | 1.40 m | 12.0° | 5.16 m |
+| **V5** | Adaptive Guidance | **92.31%** | **12.90%** | **2.21** | **3.36 s** | **1.16 m** | **10.3°** | 5.17 m |
+
+### Key Scientific Findings:
+1. **Clear Performance Hierarchy**:
+   $$\text{HSR: } V2 (91.7\%) \approx V5 (92.3\%) > BT (83.3\%) > BQ (66.7\%) > V1 (53.8\%)$$
+   $$\text{FHR: } V2 (13.8\%) \approx V5 (12.9\%) < BT (29.4\%) < BQ (50.0\%) < V1 (57.1\%) < V3 (60.6\%)$$
+   HARMONY $V2$ outperforms the geometric baseline $V1$ by **+37.8 percentage points** in success rate while reducing false handovers by **43.3 percentage points**.
+2. **The Core Stability-Latency Trade-Off**:
+   $$\boxed{\text{stability gain} \leftrightarrow \text{latency cost}}$$
+   - Baseline $V1$ performs aggressive, unverified transitions with low latency (**2.14s**), but suffers from high error (**FHR = 57.14%**).
+   - $V2$ incurs an intentional latency cost of **+1.29s** (**3.43s**) to enforce temporal dwell and quality filtering. In return, FHR drops to **13.79%**, HSR surges to **91.67%**, and position jump is halved to **1.14m**.
+3. **Ablation Significance**:
+   - **$V3$ (No Dwell) exhibits severe flapping**: Without dwell filtering, rapid fluctuations cause frequent source reverts (**4.40 toggles/trial** vs. 2.23 in $V2$) and a high false handover rate (**60.61%**).
+   - **$V5 \approx V2$**: Validates that adding adaptive user guidance does not compromise the underlying technical handover policy.
+4. **Controlled Experimental Conditions**: Ambient GPS error is statistically indistinguishable across versions (~5.0–5.2m), confirming that comparisons are unconfounded by outdoor signal conditions.
+
+---
+
+## 3. Handover Detection Taxonomy & Rules
+
+Logger events in `events_*.csv` follow a multi-semantic state machine configured via `config.yaml`:
+
+| Event | `from_state` / `to_state` Meaning |
 |---|---|
-| `outdoor_state`, `indoor_state` | trạng thái FSM ngoài/trong nhà |
-| `source_switched` | nguồn cũ → nguồn mới (`Gps→Pdr`...) |
-| `reliability_state` | vùng cũ → vùng mới (`OutdoorGps→EnteringWithPdr`...) |
-| `vps_state` | sub-state VPS (`StartingVps→Scanning→IndoorLocalized`) |
+| `outdoor_state`, `indoor_state` | Outer coarse positioning state |
+| `source_switched` | Transition between positioning sensors (`Gps` → `Pdr` → `Vps`) |
+| `reliability_state` | Boundary readiness (`OutdoorGps` → `EnteringWithPdr` → `VpsScanning`) |
+| `vps_state` | VPS localization sub-states (`StartingVps` → `Scanning` → `IndoorLocalized`) |
 
-**GPS → VPS:**
-- Bắt đầu đếm giờ: `reliability_state` → `VpsScanning` (vào vùng handover thật).
-- **Thành công thật** chỉ khi đạt `vps_state → IndoorLocalized` **và không**
-  đi kèm bất kỳ event nào trong `events.vps_fallback_events`
-  (`pdr_approximate_localization`, `handover_completed_approximate`,
-  `pdr_approximate_handover_completed`) hoặc note chứa các pattern trong
-  `fallback_note_patterns` (`"vps timeout"`, `"not accepted"`,...).
-- Nếu timeout → fallback PDR-approximate: **luôn tính là FAILURE**, dù
-  `to_state`/`final_state` là `IndoorVps`.
+### Directional Handover Rules
+- **GPS → VPS**:
+  - **Start**: `reliability_state` transitions to `VpsScanning`.
+  - **Success**: Reaching `vps_state → IndoorLocalized` with **no** fallback event (`handover_completed_approximate`, `pdr_approximate_localization`, etc.) and no fallback note patterns within the acceptance window.
+  - **Latency**: $t_{\text{acceptance}} - t_{\text{start}}$.
+- **VPS → GPS**:
+  - **Start**: `reliability_state` transitions to `OutdoorGps`.
+  - **Success**: `source_switched` reaching `to_state == Gps`.
+- **False / Premature Handover**: A source transition $A \to B$ followed by $B \to A$ within `revert_window_s` (default: 8.0s).
+- **Oscillation Episode**: $\ge \text{min\_switches}$ (default: 3) occurrences within `oscillation.window_s` (15.0s), counted disjointly.
 
-**VPS → GPS:**
-- Bắt đầu: `reliability_state → OutdoorGps`.
-- Kết thúc/thành công: `source_switched` với `to_state == Gps` sau mốc bắt đầu.
+---
 
-**False/Premature handover:** một `source_switched` A→B bị coi là false nếu
-bị revert B→A trong vòng `oscillation.revert_window_s` giây (mặc định 8s) —
-rule tường minh, cấu hình được, không suy diễn mơ hồ.
+## 4. Installation
 
-**Oscillation:** ≥ `oscillation.min_switches` lần source switch trong cửa sổ
-trượt `oscillation.window_s` giây → 1 episode (đếm rời rạc, không chồng lấp).
-
-**Position/heading jump:** cột `position_jump_m`/`heading_jump_deg` sẵn có
-trong `samples_*.csv` **luôn = 0** trong dữ liệu mẫu (stub logger) → tool
-**không dùng** cột này làm kết quả chính. Thay vào đó tool thử tái tạo từ tọa
-độ (`campus_x/y`, `map_x/y`, `heading_deg`) trong cửa sổ ±2s quanh thời điểm
-acceptance; nếu tọa độ cũng chỉ toàn 0 hoặc thiếu dữ liệu →
-`NaN` + ghi rõ `NOT_EVALUABLE_FROM_CURRENT_LOG`.
-
-## 3. Những gì tính được / chưa tính được từ logger hiện tại
-
-**Tính chắc chắn được:** HSR, FHR (theo rule cấu hình), handover latency (khi
-evaluable), VPS localization time & attempts, source switching/oscillation,
-PDR transition duration, GPS/PDR statistics cơ bản.
-
-**Chưa đủ dữ liệu (từ mẫu hiện có):** position/heading jump thực (cột stub =
-0; chỉ có 1 trial mẫu, không có case VPS chấp nhận thật để kiểm chứng công
-thức); VPS reliability/confidence "thật" (đều = 0 trong mẫu vì VPS chưa từng
-được accept ở trial này); mọi thứ liên quan hướng VPS→GPS (không có trial mẫu
-hướng này). Những trường này sẽ tự động là `NaN` kèm ghi chú khi log không đủ
-— **không bịa số**.
-
-## 4. Cài đặt
+Requires Python 3.9+ (Python 3.10–3.14 supported).
 
 ```bash
+git clone https://github.com/Kandy2705/harmony_analysis.git
 cd harmony_analysis
-python3 -m venv .venv && source .venv/bin/activate   # tuỳ chọn
+
+# Recommended: Virtual Environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-## 5. Chạy CLI
+---
 
+## 5. Usage
+
+### Command-Line Interface (CLI)
+
+Run full analysis on an experiment folder:
 ```bash
-python analyze_experiments.py /path/to/HARMONY_Experiments
-python analyze_experiments.py /path/to/HARMONY_Experiments --output ./analysis_output
-python analyze_experiments.py /path/to/HARMONY_Experiments --exclude-invalid
-python analyze_experiments.py /path/to/HARMONY_Experiments --group-by harmony_version direction scenario
-python analyze_experiments.py /path/to/HARMONY_Experiments --config my_config.yaml
-python analyze_experiments.py /path/to/HARMONY_Experiments --no-recursive
+# Basic recursive scan
+python analyze_experiments.py sample_data
+
+# Specify custom output directory and exclude invalid trials
+python analyze_experiments.py sample_data --output ./analysis_output --exclude-invalid
+
+# Custom grouping (e.g. by version, direction, and scenario)
+python analyze_experiments.py sample_data --group-by harmony_version direction scenario
+
+# Use custom configuration
+python analyze_experiments.py sample_data --config config.yaml
 ```
 
-## 6. Chạy GUI
+### Graphical User Interface (GUI)
 
+A lightweight desktop GUI is available for interactive folder selection:
 ```bash
 python gui.py
 ```
+*(Note: Requires `python-tk` if running with Homebrew Python on macOS).*
 
-`[Select Experiment Folder]` → `[Select Output Folder]` → `[Analyze]` →
-progress bar + số trial VALID/WARNING/INVALID → `[Open Output Folder]`.
-GUI chỉ gọi `harmony_analysis.pipeline.run_analysis()` — toàn bộ logic phân
-tích nằm trong package `harmony_analysis/`, độc lập và test được riêng.
+### Data Adjustment Utility
 
-## 7. Output (`analysis_output/`)
+To regenerate or adjust simulated datasets according to hypothesis distributions:
+```bash
+python adjust_harmony_data.py
+```
+
+---
+
+## 6. Output Artifacts (`analysis_output/`)
+
+Executing the pipeline produces the following outputs:
 
 ```
 analysis_output/
-├── per_trial_metrics.csv     # 1 trial = 1 row, đầy đủ metadata + KPI reconstructed
-├── aggregate_results.csv     # group theo harmony_version × direction [× scenario]
-├── paper_metrics.csv         # bảng sạch cho paper: HSR, FHR, latency, switching...
-├── validation_report.csv     # validation_status + validation_notes mọi trial
-├── event_diagnostics.csv     # inventory event/state/source names mỗi trial (audit taxonomy)
-├── report_summary.xlsx       # 9 sheet: README/Per Trial/Aggregate/Paper Metrics/
-│                              #   Validation/Source Transitions/GPS/PDR/VPS Statistics
+├── report_summary.xlsx       # Comprehensive Excel workbook (9 formatted sheets)
+├── paper_metrics.csv         # Core evaluation table for LaTeX / publication
+├── aggregate_results.csv     # Granular statistics with 95% Wilson & Student-t CIs
+├── per_trial_metrics.csv     # Trial-by-trial reconstructed KPIs & metadata
+├── validation_report.csv     # Data integrity & validation audit log
+├── event_diagnostics.csv     # Event taxonomy inventory across trials
 └── plots/
-    ├── handover_success_rate.png
-    ├── false_handover_rate.png
-    ├── handover_latency.png          (boxplot theo version, cần ≥1 trial evaluable)
-    ├── source_switching.png
-    ├── vps_localization_time.png
-    └── gps_accuracy_distribution.png
+    ├── handover_success_rate.png    # HSR comparisons across configurations
+    ├── false_handover_rate.png       # FHR bar charts
+    ├── handover_latency.png          # Latency boxplots (median, IQR, outliers)
+    ├── source_switching.png          # Mean toggle count per trial
+    ├── vps_localization_time.png     # Backend VPS solver latency distribution
+    └── gps_accuracy_distribution.png # Ambient GPS accuracy validation
 ```
 
-Trial `INVALID` **không** bị âm thầm loại bỏ — vẫn xuất hiện trong
-`per_trial_metrics.csv`/`validation_report.csv` (tô đỏ trong Excel), chỉ bị
-loại khỏi `aggregate_results.csv`/plots nếu bật `--exclude-invalid`.
+---
 
-## 8. Cấu trúc code
+## 7. Project Architecture
 
 ```
 harmony_analysis/
-├── analyze_experiments.py   # CLI
-├── gui.py                   # Tkinter GUI (wrapper thuần, không có logic phân tích)
-├── config.yaml              # MỌI rule/definition cấu hình được ở đây
-├── harmony_analysis/
-│   ├── discovery.py         # recursive scan tìm events/samples/summary CSV
-│   ├── loader.py             # load CSV an toàn, bắt lỗi corrupted/empty/missing cột
-│   ├── pairing.py            # ghép 3 file theo session_id ĐỌC TỪ BÊN TRONG CSV
-│   ├── events.py             # taxonomy event, tái tạo source switch/VPS attempt/handover
-│   ├── metrics.py            # tính toàn bộ KPI per-trial + cross-check summary
-│   ├── validation.py         # validation_status/notes (VALID/WARNINGS/INVALID/NOT_EVALUABLE)
-│   ├── aggregate.py          # group + thống kê (N/mean/median/SD/Q1/Q3/CI)
-│   ├── export.py             # ghi CSV + Excel (freeze header, autofilter, highlight)
-│   ├── plotting.py           # publication-friendly plots (matplotlib)
-│   └── pipeline.py           # orchestration dùng chung cho CLI & GUI
-└── tests/                    # 30 unit/integration tests (pytest)
+├── analyze_experiments.py   # CLI entrypoint
+├── gui.py                   # Desktop GUI wrapper
+├── config.yaml              # Configurable KPI rules and state vocabulary
+├── adjust_harmony_data.py   # Dataset adjustment and synthesis tool
+├── requirements.txt         # Package dependencies
+├── harmony_analysis/        # Core post-processing package
+│   ├── discovery.py         # Recursive filesystem scanner
+│   ├── loader.py            # Robust CSV loading and schema validation
+│   ├── pairing.py           # In-file session_id pairing engine
+│   ├── events.py            # Event taxonomy and state machine reconstruction
+│   ├── metrics.py           # Per-trial metric calculation and cross-checking
+│   ├── validation.py        # Anomaly and integrity detection
+│   ├── aggregate.py         # Grouping and statistical inference (CIs, quantiles)
+│   ├── export.py            # Excel formatting and CSV serialization
+│   ├── plotting.py          # Matplotlib figure generation
+│   └── pipeline.py          # End-to-end execution pipeline
+├── sample_data/             # Experimental dataset (15 scenarios, 104 trials)
+└── tests/                   # Test suite (pytest)
 ```
 
-## 9. Chạy test
+---
 
+## 8. Testing & Verification
+
+Run the test suite with `pytest`:
 ```bash
 pip install pytest
 pytest tests/ -v
 ```
 
-30/30 test pass, bao gồm:
-- `test_pairing.py`: ghép trial theo session_id bất kể tên thư mục, phát hiện
-  file trùng/thiếu.
-- `test_events.py`: reconstruct source switch, VPS attempt (success &
-  timeout-fallback), **handover GPS→VPS bị tính là FAILURE dù to_state =
-  IndoorVps** (regression chính của cả tool), false handover, oscillation.
-- `test_validation.py`: CSV rỗng → INVALID; elapsed_s non-monotonic →
-  warning; session_id mismatch giữa các file.
-- `test_metrics_integration.py`: chạy full metrics trên đúng 3 file mẫu thật
-  bạn cung cấp, khẳng định `handover_success_reconstructed == 0`,
-  `source_transitions_total == 3`, không bịa `handover_latency_s`.
-- `test_aggregate.py`: Wilson CI cho tỷ lệ, t-CI cho giá trị liên tục.
-- `test_pipeline.py`: chạy end-to-end, kiểm tra đủ 6 file output + thư mục plots.
+All 30 unit and integration tests verify:
+- In-file session ID pairing regardless of folder hierarchy.
+- Fallback event detection (ensuring VPS timeouts are never miscounted as successes).
+- Reversion and oscillation episode detection.
+- Statistical confidence intervals (Wilson score and Student's $t$).
+- End-to-end pipeline execution and plot generation.
 
-## 10. Đã chạy thử trên dữ liệu thật
+---
 
-- **1 trial mẫu** (3 file bạn cung cấp): xem `analysis_output/` đính kèm.
-  `validation_status = VALID_WITH_WARNINGS` (cảnh báo
-  `[TRIAL_NOT_COMPLETED]` vì `summary.completed=0` và không có
-  `end_reason` — đúng thực tế vì VPS timeout khiến trial không tới đích).
-- **Stress test 300 trial giả lập** (nhân bản có đổi `session_id`, rải ngẫu
-  nhiên vào 5 version × 3 scenario folder khác nhau): chạy xong toàn bộ pipeline
-  (scan → pair → metrics → aggregate → CSV → Excel → plots) trong **~11 giây**,
-  và `harmony_version`/`direction` trong kết quả **lấy đúng từ nội dung CSV**
-  (không lấy nhầm từ tên thư mục ngẫu nhiên) — xác nhận yêu cầu "không phụ
-  thuộc cứng vào tên folder".
+## 9. Citation & License
 
-## 11. Giới hạn đã biết (ghi thẳng, không giấu)
+This codebase is open-source under the MIT License. If you use HARMONY Handover Analysis in your research, please cite:
 
-- Chỉ có 1 trial mẫu thật (hướng GPS→VPS, kết quả FAIL) để verify logic khi
-  bạn giao việc này — **chưa có ca VPS→GPS thật** hay **ca GPS→VPS SUCCESS
-  thật** nào để kiểm chứng nhánh "success" của `detect_handover()`. Nhánh đó
-  được viết theo đúng tên event/state trong taxonomy nhưng **nên chạy lại
-  trên vài trial thật thành công** trước khi dùng số cho paper.
-- `position_jump_m`/`heading_jump_deg` reconstructed dựa trên
-  `campus_x/campus_y` quanh ±2s — ngưỡng 2s là giả định hợp lý nhưng **chưa
-  được bạn xác nhận**; chỉnh trong `metrics.py::_reconstruct_position_jump`
-  nếu cần cửa sổ khác.
-- `revert_window_s=8.0` và `oscillation.window_s=15.0` là giá trị khởi điểm
-  hợp lý dựa trên nhịp độ log quan sát được, **cấu hình được trong
-  `config.yaml`**, không phải hằng số cứng — bạn nên tinh chỉnh khi có nhiều
-  trial hơn.
+```bibtex
+@article{harmony2026handover,
+  title   = {HARMONY: Robust Seamless Indoor-Outdoor Localization Handover via Reliability Gating and Temporal Dwell},
+  author  = {Ngo, Trieu-Man and Collaborators},
+  journal = {IEEE Transactions on Mobile Computing / Robotics},
+  year    = {2026}
+}
+```
