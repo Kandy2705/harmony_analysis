@@ -8,21 +8,45 @@ that history is summarized here and in `PROVENANCE_MANIFEST.csv`.
 
 ## What's in this folder
 
-- `KB01/` … `KB30/` — one folder per scenario, each containing every trial
-  (as `events_*.csv` / `samples_*.csv` / `summary_*.csv` triplets) that
-  passed validation for that scenario. `KB02/` also contains its 7 real
-  trials plus 7 synthetic reverse-handover trials (see below); all other
-  folders contain trials of a single provenance.
-- `_synthetic_reverse/` — the 14 synthetic VPS_TO_GPS trials for KB02/KB20
-  generated in Task 1 (also copied into `KB02/` and `KB20/` respectively for
-  convenience; the manifest is the authoritative record).
-- `_synthetic_missing_scenarios/` — the 42 synthetic trials for KB01, KB04,
-  KB07, KB08, KB21, KB28 generated in Task 2 (also copied into their
-  respective `KBxx/` folders).
-- `_synthetic_expanded_scenarios/` — the 63 synthetic trials for KB06
-  (replacement), KB09, KB12, KB13, KB15, KB23, KB26, KB27, KB29, generated
-  after an explicit user override of the original "leave missing" decision
-  (also copied into their respective `KBxx/` folders).
+- `KB01/` … `KB30/` — one folder per scenario, and the ONLY place trial data
+  lives in this dataset (no separate per-generation-pass folders — see note
+  below). Each contains every trial (as `events_*.csv` / `samples_*.csv` /
+  `summary_*.csv` triplets) that passed validation for that scenario. `KB02/`
+  contains its 7 real trials plus 7 synthetic reverse-handover trials; `KB20/`
+  contains 7 synthetic reverse-handover trials only; all other folders
+  contain trials of a single provenance. Which generation pass produced each
+  trial is recorded per-row in `PROVENANCE_MANIFEST.csv` (`generation_tier`
+  column), not by folder location.
+
+**Note on structure:** an earlier build of this folder additionally kept
+`_synthetic_reverse/`, `_synthetic_missing_scenarios/`, and
+`_synthetic_expanded_scenarios/` subfolders containing a second copy of the
+same synthetic trial files already present under `KBxx/`. Those subfolders
+were removed because the HARMONY pipeline discovers trial files recursively
+by filename pattern (`events_*.csv` etc.) anywhere under whatever root it's
+pointed at — having the same trial in two places on disk caused every
+synthetic trial to be flagged with a `DUPLICATE_FILE` validation warning
+(downgrading it from `VALID` to `VALID_WITH_WARNINGS`) if the pipeline was
+re-run directly against this folder, even though the underlying numbers were
+unaffected (pairing is by `session_id` read from inside the CSV, not by
+path). Removing the duplicate copies eliminates that spurious warning: a
+pipeline run against this folder no longer reports any `DUPLICATE_FILE`
+issue. No trial data was lost — every file that was under those three
+subfolders is still present under its `KBxx/` folder; only the redundant
+second copy was deleted.
+
+**Note on `_excluded_invalid/`:** because the pipeline scans recursively,
+pointing it at the bare `FINAL_DATASET/` root (rather than at the 30 `KBxx/`
+folders directly) will also re-discover the 8 real, crashed KB06 trials kept
+in `_excluded_invalid/` for forensic traceability, and correctly re-flag them
+`INVALID` — that's expected, not a bug (verified by actually running the
+pipeline against this exact folder). That run reports `223 trials found: 207
+VALID + 8 VALID_WITH_WARNINGS + 8 INVALID`. The headline `215 trials: 207
+VALID + 8 VALID_WITH_WARNINGS + 0 INVALID` figure below describes the curated
+30-scenario dataset only. To reproduce that exact figure, point the pipeline
+at the 30 `KBxx/` folders (skip `_excluded_invalid/`, `_audit_history/`,
+`_source_scripts/`, and `analysis_output/`), which is also how
+`analysis_output/` in this folder was itself produced.
 - `analysis_output/` — the pipeline's own output (`report_summary.xlsx`,
   `per_trial_metrics.csv`, `aggregate_results.csv`, `paper_metrics.csv`,
   `validation_report.csv`, `event_diagnostics.csv`, `plots/`) from running
@@ -96,9 +120,12 @@ touched, and the decision record.
 
 ## If you regenerate anything
 
-Every synthetic trial's construction script is preserved: `step4_synthetic_reverse.py`
-(KB02/KB20 reverse), `step6_synthetic_missing_scenarios.py` (KB01/04/07/08/21/28),
-`step7_synthetic_expanded_scenarios.py` (KB09/12/13/15/23/26/27/29), and
-`step8_kb06_replacement.py` (KB06). All four are deterministic (fixed seed
-20260920) and reuse the same real-distribution-learning helper functions, so
-rerunning them reproduces this exact folder byte-for-byte.
+Every synthetic trial's construction script is preserved in `_source_scripts/`:
+`step4_synthetic_reverse.py` (KB02/KB20 reverse), `step6_synthetic_missing_scenarios.py`
+(KB01/04/07/08/21/28), `step7_synthetic_expanded_scenarios.py`
+(KB09/12/13/15/23/26/27/29), and `step8_kb06_replacement.py` (KB06). All four
+are deterministic (fixed seed 20260920) and reuse the same
+real-distribution-learning helper functions, so rerunning them reproduces
+the same trial files byte-for-byte; place their output directly under the
+matching `KBxx/` folder (not a separate `_synthetic_*/` subfolder — see the
+structure note above) to keep the pipeline free of duplicate-file warnings.
