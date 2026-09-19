@@ -1,0 +1,13 @@
+utc_iso,session_id,harmony_version,harmony_profile,quality_gate,temporal_dwell,map_id_check,recovery_fsm,adaptive_guidance,elapsed_s,event,from_state,to_state,source,destination,latitude,longitude,gps_accuracy_m,campus_x,campus_y,campus_z,map_x,map_y,map_z,vps_attempt,note,scenario_id,data_provenance,synthetic
+2026-09-20T00:00:00.0000000Z,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,0.0,trial_started,,,Vps,B9-EXIT,,,,,,,,,,,auto=True,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:00.0000000Z,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,0.0,app_resumed,,,Vps,B9-EXIT,,,,,,,,,,,,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:00.0000000Z,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,0.0,indoor_state,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,synthetic reverse support: trial begins already indoors,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:15.0000000Z,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,15.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:30.0000000Z,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,30.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:34.9830000Z,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,34.983,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,route_revision incremented (backtrack); wrong_way_count=1,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:00:45.0000000Z,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,45.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:01:00.0000000Z,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,60.0,indoor_step_checkpoint,,IndoorVps,Vps,B9-EXIT,,,,,,,,,,,periodic indoor navigation checkpoint,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+2026-09-20T00:01:09.9660000Z,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,69.966,reliability_state,IndoorVps,OutdoorGps,Vps,B9-EXIT,,,,,,,,,,,Exiting indoor volume; reliability threshold crossed toward outdoor,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,69.966,source_switched,Vps,Pdr,Pdr,B9-EXIT,,,,,,,,,,,Vps->Pdr,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,87.316,quality_threshold_passed,,,Pdr,B9-EXIT,,,,,,,,,,,GPS quality threshold passed during reacquisition,KB20,SYNTHETIC_REVERSE_SUPPORT,1
+,SYNTH_KB20_V2_7591_REV,V2,Reliable Handover,1,1,1,1,0,91.26,source_switched,Pdr,Gps,Gps,B9-EXIT,,,,,,,,,,,Pdr->Gps; GPS dwell/reliability gate satisfied,KB20,SYNTHETIC_REVERSE_SUPPORT,1

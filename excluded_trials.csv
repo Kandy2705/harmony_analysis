@@ -1,0 +1,9 @@
+session_id,scenario_id,validation_status,validation_reason
+20260912_025311_208_BQ_GPS_TO_VPS_NORMAL_DEV_FDB5,KB06,INVALID,"[TOO_FEW_EVENTS] Only 1 event rows (< 5). | [TRIAL_NOT_COMPLETED] summary.completed=0 and no end_reason logged; trial may have been aborted, reset, or app-closed mid-run."
+20260912_024916_056_V1_GPS_TO_VPS_NORMAL_DEV_CE35,KB06,INVALID,"[TOO_FEW_EVENTS] Only 1 event rows (< 5). | [TRIAL_NOT_COMPLETED] summary.completed=0 and no end_reason logged; trial may have been aborted, reset, or app-closed mid-run."
+20260912_025157_240_V4_GPS_TO_VPS_NORMAL_DEV_5697,KB06,INVALID,"[TOO_FEW_EVENTS] Only 1 event rows (< 5). | [TRIAL_NOT_COMPLETED] summary.completed=0 and no end_reason logged; trial may have been aborted, reset, or app-closed mid-run."
+20260912_025016_406_V2_GPS_TO_VPS_NORMAL_DEV_9635,KB06,INVALID,"[TOO_FEW_EVENTS] Only 3 event rows (< 5). | [TRIAL_NOT_COMPLETED] summary.completed=0 and no end_reason logged; trial may have been aborted, reset, or app-closed mid-run."
+20260912_024803_367_BT_GPS_TO_VPS_NORMAL_DEV_2860,KB06,INVALID,"[TOO_FEW_EVENTS] Only 3 event rows (< 5). | [TRIAL_NOT_COMPLETED] summary.completed=0 and no end_reason logged; trial may have been aborted, reset, or app-closed mid-run."
+20260912_025112_771_V3_GPS_TO_VPS_NORMAL_DEV_8BD4,KB06,INVALID,"[TOO_FEW_EVENTS] Only 1 event rows (< 5). | [TRIAL_NOT_COMPLETED] summary.completed=0 and no end_reason logged; trial may have been aborted, reset, or app-closed mid-run."
+20260912_025225_839_V5_GPS_TO_VPS_NORMAL_DEV_1134,KB06,INVALID,"[TOO_FEW_EVENTS] Only 1 event rows (< 5). | [TRIAL_NOT_COMPLETED] summary.completed=0 and no end_reason logged; trial may have been aborted, reset, or app-closed mid-run."
+20260914_013304_624_V2_GPS_TO_VPS_NORMAL_DEV_4CC7,KB19,INVALID,"[TOO_FEW_EVENTS] Only 3 event rows (< 5). | [TRIAL_NOT_COMPLETED] summary.completed=0 and no end_reason logged; trial may have been aborted, reset, or app-closed mid-run."

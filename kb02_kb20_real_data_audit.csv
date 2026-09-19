@@ -1,0 +1,9 @@
+scenario_id,session_id,harmony_version,real_or_synthetic,handover_start_s,handover_end_s,handover_success_reconstructed,usable_as_reverse_template,reason
+KB02,20260917_082329_745_V1_GPS_TO_VPS_NORMAL_DEV_A000,V1,REAL,,,,False,No reliability_state->OutdoorGps event found.
+KB02,20260917_084301_102_V5_GPS_TO_VPS_NORMAL_DEV_416E,V5,REAL,,,,False,No reliability_state->OutdoorGps event found.
+KB02,20260917_083639_189_V3_GPS_TO_VPS_NORMAL_DEV_DD2D,V3,REAL,,,,False,No reliability_state->OutdoorGps event found.
+KB02,20260917_082934_913_V2_GPS_TO_VPS_NORMAL_DEV_A61C,V2,REAL,173.046,,,False,Left indoor volume but no source_switched->Gps event found before trial log ends.
+KB02,20260917_085315_835_BQ_GPS_TO_VPS_NORMAL_DEV_428F,BQ,REAL,206.148,,,False,Left indoor volume but no source_switched->Gps event found before trial log ends.
+KB02,20260917_083855_966_V4_GPS_TO_VPS_NORMAL_DEV_4AA1,V4,REAL,133.701,,,False,Left indoor volume but no source_switched->Gps event found before trial log ends.
+KB02,20260917_090606_561_BT_GPS_TO_VPS_NORMAL_DEV_6228,BT,REAL,187.119,,,False,Left indoor volume but no source_switched->Gps event found before trial log ends.
+KB20,(none),(all),REAL,,,,False,0 real KB20 trials collected to date.
